@@ -1,0 +1,125 @@
+:root{
+    --red: #C03D3D;
+    --white: #ffffff;
+    --gray: #383838;
+    --light-pink: #DF9E9E
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mitr', sans-serif;
+    color: var(--gray);
+}
+.container{
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 75px 75px 75px auto;
+    column-gap: 15px;
+}
+h1{
+    font-weight: 500;
+    grid-column: 3/-1;
+    grid-row: 2;
+}
+.form-technology{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row: 3;
+    grid-column: 3/11;
+}
+input{
+    padding-left: 20px;
+    font-weight: 300;
+    outline: none;
+    border: var(--gray) solid 1.5px;
+    height: 35px;
+    border-radius: 5px;
+}
+input[type=text]:focus{
+    border-color: var(--light-pink);
+    transition: 0.1s;
+}
+.btn{
+    color: var(--red);
+    background-color: #FCEDE8;
+    cursor: pointer;
+    margin: 0 20px;
+    width: 80px;
+    height: 35px;
+    font-weight: 500;
+    font-size: 16px;
+
+    border: var(--light-pink) solid 1.5px;
+    border-radius: 5px;
+}
+.btn:hover{
+    background-color: var(--red);
+    color: var(--white);
+    transition: 0.3s;
+}
+.link{
+    color: var(--red);
+    grid-column-end: -1;
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    justify-self: end;
+}
+#card-container{
+    display: grid;
+    grid-column: 3/11;
+    grid-row: 4/-1;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+    grid-template-rows: repeat(65px);
+    
+}
+.card{
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0px 3px 4px 1px rgba(56, 56, 56,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    height: 65px;
+    margin: 15px 0;
+    position: relative;
+}
+.x{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    width: 16px;
+    background-size: contain;
+    cursor: pointer;
+}
+.x:hover{
+    content: url("../img/x_hover.png");
+    transition:0.3s;
+}
+@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 992px) {
+
+}
+@media only screen and (max-width: 768px){
+    #card-container{
+        grid-template-columns: repeat(1,1fr);
+        grid-row-start: 5;
+    }
+    .link{
+        grid-row-start: 4;
+        grid-column-start: 1;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+}
+
